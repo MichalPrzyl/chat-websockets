@@ -1,14 +1,14 @@
-.app-container{
+.app-container {
     margin: 50px;
     padding: 30px;
     border: 1px solid black;
 }
 
-.messages-container{
+.messages-container {
     margin: 50px;
 }
 
-.btn{
+.btn {
     border: 1px solid black;
     width: fit-content;
     margin: 20px;
@@ -16,12 +16,12 @@
     border-radius: 20px;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     background: rgb(99, 56, 219);
 }
 
-.message-input{
+.message-input {
     width: 100%;
     padding: 10px;
     font-size: 20px;
