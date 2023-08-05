@@ -1,3 +1,16 @@
+# Overview
+This projects was created to have some fun with layering and channeling.
+Thanks to websockets we can establish connection without unnecessary trafic and use it to build **Chat application**.
+It is simple, fast and very easy to implement.
+There is only one room, you just connect to frontend page, put your username there and start to use the chatroom.
+
+## I am using: ✍
+- python 🐍
+- django 🚀
+- react 👓
+- javascript 🙆🏻‍♀️
+- potentially redis but here I decided to use simples solution possible so just `channels.layers.InMemoryChannelLayer"` ¯\_(ツ)_/¯
+
 # Start the project
 
 1. Clone the repository
