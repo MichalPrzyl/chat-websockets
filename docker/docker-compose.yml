@@ -1,0 +1,18 @@
+services:
+  backend:
+    image: backend_image
+    build: 
+      context: ../backend
+    container_name: chat-backend
+    command: "python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - 8000:8000
+      
+  frontend:
+    image: frontend_image
+    build: 
+      context: ../frontend
+    container_name: chat-front
+    command: npm start || tail -F _
+    ports:
+      - 3000:3000
