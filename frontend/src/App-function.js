@@ -14,8 +14,6 @@ const AppFunction = () => {
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
 
-    const div = useRef(null)
-
     useEffect(() => {
         chatSocket.onopen = () => {
             console.log('WebSocket opened')
@@ -75,7 +73,7 @@ const AppFunction = () => {
                 <h1>MP Chat 1.0.0</h1>
 
                 {/* messages */}
-                <div className='messages-container' id='scrollable-div' ref={div}>
+                <div className='messages-container' id='scrollable-div'>
                     {messages ?
                         messages.map((element, index) =>
                             <Message

@@ -1,7 +1,6 @@
 .app-container {
     margin: 50px;
     padding: 30px;
-    /* border: 1px solid black; */
 }
 
 .messages-container {
@@ -9,7 +8,6 @@
     overflow-y: auto;
     max-height: 600px;
     overflow-x: hidden;
-    /* border: 1px solid black; */
     padding-left: 20px;
     scroll-margin-top: 0px;
     scroll-margin-bottom: 0px;
