@@ -13,6 +13,22 @@ There is only one room, you just connect to frontend page, put your username the
 
 # Start the project
 
+## Docker
+The simplest and fastest way to run this app is to use Docker.
+Just make sure daemon is running, clone this repo, enter `docker` directory
+and use following command:
+
+```
+docker-compose up
+```
+
+If you want to know what is happening just inspect `docker-compose.yml` file.
+It's creating 2 images, and 2 containers: first for frontend, second for backend.
+
+## Local environments
+You don't have to use docker. You can just clone repository
+and run this app locally.
+
 1. Clone the repository
 2. Enter to `frontend` directory and use following command:
 
