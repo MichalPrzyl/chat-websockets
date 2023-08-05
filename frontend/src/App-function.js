@@ -15,17 +15,8 @@ const AppFunction = () => {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 400) {
-                // setShowTopBtn(true);
-            } else {
-                // setShowTopBtn(false);
-            }
-        });
-
-
         chatSocket.onopen = () => {
-            console.log('opened')
+            console.log('WebSocket opened')
         }
 
         chatSocket.onmessage = function (e) {
@@ -33,8 +24,7 @@ const AppFunction = () => {
             setMessages(messages => [...messages, {
                 message: data.message,
                 user: data.user
-            }
-            ])
+            }])
             scroolToUp();
         }
     }, [])
@@ -77,7 +67,6 @@ const AppFunction = () => {
 
                 {/* messages */}
                 <div className='messages-container'>
-                    {/* {console.log(messages)} */}
                     {messages ?
                         messages.map((element, index) =>
                             <Message
@@ -95,7 +84,7 @@ const AppFunction = () => {
                         className="message-input"
                         autoFocus>
                     </input>
-                        
+
                     <div>
                         <div
                             onClick={sendHandler}
@@ -104,7 +93,6 @@ const AppFunction = () => {
                     </div>
                 </div>
             </div>
-
             :
             <div className='app-container'>
                 <Login
