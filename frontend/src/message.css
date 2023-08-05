@@ -1,16 +1,25 @@
-.message-wrapper{
-    border-radius: 20px;;
+.message-wrapper {
+    border-radius: 20px;
     padding: 10px 0px 20px 20px;
     margin-bottom: 10px;
     background: rgb(141, 141, 141);
     box-shadow: 5px 5px 10px 2px rgb(8, 8, 8);
     transition: 2s all;
+    animation-name: add-message;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
 }
 
-.user{
+.user {
     color: rgb(206, 206, 206);
 }
 
-.my-own-message{
+.my-own-message {
     background: rgb(76, 121, 204);
+}
+
+@keyframes add-message {
+    0% {
+        transform: translate3d(-50px, 0, 0);
+    }
 }
