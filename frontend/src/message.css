@@ -3,7 +3,8 @@
     width: 85%;
     padding: 10px 0px 20px 20px;
     margin-bottom: 10px;
-    background: rgb(141, 141, 141);
+    /* background: rgb(141, 141, 141); */
+    background: linear-gradient(90deg, rgba(141,141,141,1) 0%, rgba(82,82,82,1) 100%); 
     box-shadow: 5px 5px 10px 2px rgb(8, 8, 8);
     transition: 2s all;
     animation-name: add-message;
@@ -17,7 +18,8 @@
 }
 
 .my-own-message {
-    background: rgb(76, 121, 204);
+    /* background: rgb(76, 121, 204); */
+    background: linear-gradient(270deg, rgba(0,32,92,1) 0%, rgba(76,121,204,1) 100%);
 }
 
 @keyframes add-message {
