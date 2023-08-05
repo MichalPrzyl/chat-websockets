@@ -1,5 +1,6 @@
 .message-wrapper {
     border-radius: 20px;
+    width: 85%;
     padding: 10px 0px 20px 20px;
     margin-bottom: 10px;
     background: rgb(141, 141, 141);
@@ -8,6 +9,7 @@
     animation-name: add-message;
     animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
+    /* border: 1px solid black; */
 }
 
 .user {

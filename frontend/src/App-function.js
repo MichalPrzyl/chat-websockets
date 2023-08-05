@@ -14,6 +14,8 @@ const AppFunction = () => {
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
 
+    const div = useRef(null)
+
     useEffect(() => {
         chatSocket.onopen = () => {
             console.log('WebSocket opened')
@@ -25,14 +27,21 @@ const AppFunction = () => {
                 message: data.message,
                 user: data.user
             }])
-            scroolToUp();
         }
     }, [])
 
+    // Callback after changeing 'messages' state
+    useEffect(() => {
+        const scrollableDiv = document.getElementById('scrollable-div');
+        if (scrollableDiv != null){
+            scroolToDown(scrollableDiv);
+        }
+    }, [messages])
+
 
     // function that moves document to bottom so we can see message input
-    const scroolToUp = () => {
-        window.scrollTo({
+    const scroolToDown = (scrollableDiv) => {
+        scrollableDiv.scrollTo({
             top: 9999999,
             behavior: 'smooth'
         })
@@ -66,7 +75,7 @@ const AppFunction = () => {
                 <h1>MP Chat 1.0.0</h1>
 
                 {/* messages */}
-                <div className='messages-container'>
+                <div className='messages-container' id='scrollable-div' ref={div}>
                     {messages ?
                         messages.map((element, index) =>
                             <Message
@@ -86,7 +95,7 @@ const AppFunction = () => {
                     </input>
 
                     <div>
-                        <div
+                        <div id='send-btn'
                             onClick={sendHandler}
                             className='btn'>
                             Wyślij</div>
