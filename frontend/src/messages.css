@@ -1,0 +1,29 @@
+.app-container{
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.messages-container{
+    margin: 50px;
+}
+
+.btn{
+    border: 1px solid black;
+    width: fit-content;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: rgb(99, 56, 219);
+}
+
+.message-input{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 30px;
+}
