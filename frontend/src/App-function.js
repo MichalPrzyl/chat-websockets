@@ -71,9 +71,9 @@ const AppFunction = () => {
     }
 
     return <>
-        <h1>MP Chat 1.0.0</h1>
         {logged ?
             <div className='app-container'>
+                <h1>MP Chat 1.0.0</h1>
 
                 {/* messages */}
                 <div className='messages-container'>
